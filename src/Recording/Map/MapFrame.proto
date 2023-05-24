@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+package gymbag.proto;
+option csharp_namespace = "Neuro.Recording.Map";
+
+import "Recording/Common/PositionData.proto";
+import "Recording/Map/DoorData.proto";
+import "Recording/Map/VentData.proto";
+
+message MapFrame {
+    repeated DoorData NearbyDoors = 1;
+    repeated VentData NearbyVents = 2;
+    PositionData MeetingButton = 3;
+}

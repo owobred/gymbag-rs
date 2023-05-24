@@ -1,0 +1,14 @@
+/target
+
+.vscode/
+
+.venv/
+__pycache__/
+
+# compiled wheels on linux
+*.so
+
+/recordings
+
+Cargo.lock
+Poetry.lock

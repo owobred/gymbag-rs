@@ -1,0 +1,12 @@
+﻿syntax = "proto3";
+package gymbag.proto;
+option csharp_namespace = "Neuro.Recording.DeadBodies";
+
+import "Recording/Common/Vector2.proto";
+
+message DeadBodyData {
+    sint32 ParentId = 1;
+    Vector2 Position = 2;
+    float FirstSeenTime = 3;
+    bytes NearbyPlayers = 4;
+}

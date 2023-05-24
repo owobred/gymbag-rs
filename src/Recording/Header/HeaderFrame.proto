@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+package gymbag.proto;
+option csharp_namespace = "Neuro.Recording.Header";
+
+import "Recording/Common/MapType.proto";
+import "Recording/Common/RoleType.proto";
+
+message HeaderFrame {
+    MapType map = 1;
+    bool IsImpostor = 2;
+    RoleType Role = 3;
+    repeated sint32 OtherImpostors = 4;
+    uint32 Version = 5;
+    bool IsFreeplay = 6;
+}

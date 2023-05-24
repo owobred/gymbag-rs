@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+package gymbag.proto;
+option csharp_namespace = "Neuro.Recording.Map";
+
+import "Recording/Common/PositionData.proto";
+import "Recording/Common/Vector2.proto";
+
+message VentData {
+    sint32 Id = 1;
+    PositionData Position = 2;
+    repeated ConnectingVentData ConnectingVents = 3;
+
+    message ConnectingVentData {
+        sint32 Id = 1;
+        Vector2 Position = 2;
+    }
+}
